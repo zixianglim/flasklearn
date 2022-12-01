@@ -1,0 +1,19 @@
+<h1>Hello World!</h1>
+
+<p>This is my webpage!</p>
+
+<p>my name is {{ first_name }}</p>
+
+<p>{{  stuff|safe  }}</p>
+
+<h3>Fav pizza</h3>
+{% for toppings in fav %}
+    {% if toppings == 20 %} <!-- dont need "" for string also-->
+        {{toppings + 10}}<br/> <!-- go jinja documentation for filters -->
+    {% else %}
+        {{toppings}}</br>
+    {% endif %}
+{% endfor %} <!-- reading for loops -->
+
+<br></br>
+{{ fav.0 }} <!-- each element in loops -->
